@@ -1,9 +1,10 @@
 body{
-    background-color: aquamarine;
+    background: linear-gradient(blue, 10%, pink);
 }
 .bayan{
     padding:30px;
     background:#fff;
+    background: pink;
     width:500px;
     border-radius: 5px;
     box-sizing:border-box;
