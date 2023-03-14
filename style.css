@@ -1,38 +1,92 @@
 body{
-    background: linear-gradient(blue, 10%, pink);
+    background: cornflowerblue;
+    height: 100%;
 }
 .bayan{
-    padding:30px;
-    background:#fff;
-    background: pink;
-    width:500px;
-    border-radius: 5px;
+    padding:0;
+    background: rgb(223, 209, 13);
+    width:50%;
     box-sizing:border-box;
     margin: 0 auto;
+    list-style: none;
+    margin-bottom: 1.2rem;
 }
 .bayan{
     font-family:'Open-sans',Arial,sans-serif;
 }
-.content img{
-    width: 269px;
+.bayan_content img{
+    width: 45%;
+    margin: 0 25%;
 }
-.name{
-    
+.name{ 
+    display: block;
     cursor:pointer;
-    margin:0px 0px 10px 0px;
+    margin-bottom: 1.2rem;
     padding:10px;
-    font-size: 22px;
+    font-size: 150%;
     font-weight: 600;
     box-sizing: border-box;
 }
 .bayan span{
     float: right;
     font-size: 30px;
-  }
-  .close .bayan{
-    height:0px;
-  }
-  .content{
-    margin: 0px 70px;
-  }
-  
+}
+.bayan_mem:hover ~ .name{
+    background-color: rgb(233, 220, 34);
+}
+.bayan_mem:checked ~ .name{
+    background-color: rgb(233, 220, 34);
+}
+.bayan_content {
+    border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+    
+}
+.bayan_mem{
+    position: absolute;
+    display: none;
+}
+.bayan_mem:checked ~ .bayan_content {
+    clip: auto;
+	height: auto;
+	margin: auto;
+	overflow: visible;
+	position: static;
+	white-space: normal;
+	width: auto;
+    padding: 1.2rem;
+    transition: 0.5s;
+}
+.bayan_mem:hover ~ .bayan_content {
+    clip: auto;
+	height: auto;
+	margin: auto;
+	overflow: visible;
+	position: static;
+	white-space: normal;
+	width: auto;
+    padding: 1.2rem;
+    animation: fadeIn ease-in 0.5s;
+    transition: 0.5s;
+
+}
+
+
+@media screen and (max-width: 900px) {
+    
+    .name{ 
+        margin-bottom: 1.2rem;
+        padding:10px;
+        font-size: 100%;
+        font-weight: 400;
+        box-sizing: border-box;
+    }
+
+}
