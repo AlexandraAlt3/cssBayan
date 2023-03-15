@@ -10,11 +10,14 @@ body{
     margin: 0 auto;
     list-style: none;
     margin-bottom: 1.2rem;
+    transition: 0.4s;
 }
 .bayan{
     font-family:'Open-sans',Arial,sans-serif;
+    transition: 0.4s;
 }
 .bayan_content img{
+    cursor:pointer;
     width: 45%;
     margin: 0 25%;
 }
@@ -33,10 +36,13 @@ body{
 }
 .bayan_mem:hover ~ .name{
     background-color: rgb(233, 220, 34);
+    transition: 0.4s;
 }
-.bayan_mem:checked ~ .name{
-    background-color: rgb(233, 220, 34);
+.name:checked ~ .radio_first{
+    transform: rotate(0deg);
+    
 }
+
 .bayan_content {
     border: 0;
 	clip: rect(0 0 0 0);
@@ -74,7 +80,7 @@ body{
 	width: auto;
     padding: 1.2rem;
     animation: fadeIn ease-in 0.5s;
-    transition: 0.5s;
+    transition: 1s;
 
 }
 
@@ -85,8 +91,72 @@ body{
         margin-bottom: 1.2rem;
         padding:10px;
         font-size: 100%;
-        font-weight: 400;
+        font-weight: 500;
         box-sizing: border-box;
     }
 
+    .bayan span{
+        float: right;
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 751px){
+
+    .bayan{
+        padding:0;
+        background: rgb(223, 209, 13);
+        width:75%;
+        box-sizing:border-box;
+        margin: 0 auto;
+        list-style: none;
+        margin-bottom: 1.2rem;
+    }
+
+}
+
+@media screen and (max-width: 395px){
+
+    .bayan{
+        width:85%;
+    }
+
+}
+
+@media screen and (max-width: 359px){
+    .name{ 
+        margin-bottom: 1.2rem;
+        padding:10px;
+        font-size: 100%;
+        font-weight: 100;
+        box-sizing: border-box;
+    }
+
+    .bayan span{
+        float: right;
+        font-size: 10px;
+    }
+
+    .bayan_content img{
+        width: 75%;
+        margin: 0 10%;
+    }
+
+}
+
+@media screen and (max-width: 331px){
+    .bayan{
+        width:95%;
+    }
+}
+
+@media screen and (max-width: 331px){
+    .name{ 
+        margin-bottom: 1 rem;
+        padding: 5px;
+        font-size: 80%;
+        font-weight: 400;
+        box-sizing: border-box;
+    }
 }
